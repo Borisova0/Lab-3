@@ -1,0 +1,33 @@
+class Laptop:
+    def __init__(self, manufacturer, model, ram, price):
+        self.manufacturer = manufacturer
+        self.model = model
+        self.ram = ram
+        self.price = price
+
+    def increase_ram(self, amount):
+        self.ram += amount
+
+    def change_price(self, new_price):
+        self.price = new_price
+
+    def show_info(self):
+        print("Производитель:", self.manufacturer)
+        print("Модель:", self.model)
+        print("RAM:", self.ram, "GB")
+        print("Цена:", self.price, "тг")
+
+
+laptop1 = Laptop("Apple", "MacBook Air", 8, 550000)
+laptop2 = Laptop("ASUS", "Vivobook", 16, 350000)
+laptop3 = Laptop("Lenovo", "IdeaPad", 8, 300000)
+
+laptop1.increase_ram(8)
+laptop1.show_info()
+
+laptop2.change_price(330000)
+laptop2.show_info()
+
+laptop3.increase_ram(8)
+laptop3.change_price(280000)
+laptop3.show_info()
